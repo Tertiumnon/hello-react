@@ -1,0 +1,77 @@
+.cards-form {
+  width: 270px;
+  grid-gap: 10px;
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "size size"
+    "radius radius"
+    "square square"
+    "prev next";
+}
+
+.cards-form .size {
+  grid-area: size;
+}
+
+.cards-form .radius {
+  grid-area: radius;
+  position: relative;
+}
+
+.cards-form .radius:after {
+  content: "px";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  right: 0;
+  top: 0;
+  padding: 10px 8px 4px 10px;
+  font-weight: bold;
+  color: #c8c8c8;
+  margin: 1px 4px;
+}
+
+.cards-form .square {
+  grid-area: square;
+  margin-top: 60px;
+}
+
+.cards-form .prev {
+  grid-area: prev;
+}
+
+.cards-form .next {
+  grid-area: next;
+}
+
+.cards-form input[type="text"],
+.cards-form button {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.cards-form input[type="text"] {
+  width: calc(100% - 36px);
+  height: 44px;
+  padding: 0 16px;
+  font-size: .95em;
+  font-weight: bold;
+}
+
+.cards-form button {
+  height: 46px;
+  padding: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .95em;
+  width: 100%;
+  background-color: white;
+}
